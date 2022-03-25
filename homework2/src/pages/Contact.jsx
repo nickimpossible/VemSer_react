@@ -1,18 +1,24 @@
+import Header from "../components/Header";
+
+import "./Contact.css"
+
 function Contact() {
     return (
-        <div>
-            <h1>Contact Me</h1>
-            <form>
-                <label >
-                    <strong>Nome:</strong>
+        <>
+            <Header />
+            <div className="contact-container">
+                <h1>Contato</h1>
+                <form>
+                    <p>Nome:</p>
                     <input type="text" name='name' />
-                    <strong>Assunto:</strong>
+                    <p>Assunto:</p>
                     <input type="text" assunto='assunto' />
-                    <strong>Digite a mensagem:</strong>
+                    <p>Digite a mensagem:</p>
                     <textarea name="mensagem" cols="30" rows="10" />
-                </label>
-            </form>
-        </div>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </>
     )
 }
 export default Contact;

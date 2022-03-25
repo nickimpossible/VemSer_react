@@ -7,8 +7,6 @@ import Contact from "./pages/Contact";
 import Profile from "./pages/Profile";
 import Repos from "./pages/Repos";
 
-import './App.css';
-
 function App() {
   return (
     <Router>

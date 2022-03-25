@@ -1,4 +1,7 @@
 import { useEffect, useState } from 'react';
+import Header from '../components/Header';
+
+import "./Repos.css";
 
 function Repos() {
     const [reposData, setReposData] = useState([]);
@@ -14,17 +17,20 @@ function Repos() {
     }, []);
 
     return (
-        <div className="repos-container">
-            <h1>Repositórios</h1>
-            {
-                reposData.map(repo => (
-                    <div key={repo.id}>
-                        <a href={repo.html_url}>{repo.name}</a>
-                        <p>{repo.language}</p>
-                    </div>
-                ))
-            }
-        </div>
+        <>
+            <Header />
+            <div className="repos-container">
+                <h1>Repositórios</h1>
+                {
+                    reposData.map(repo => (
+                        <div key={repo.id}>
+                            <a href={repo.html_url}>{repo.name}</a>
+                            <p>{repo.language}</p>
+                        </div>
+                    ))
+                }
+            </div>
+        </>
     );
 }
 export default Repos;

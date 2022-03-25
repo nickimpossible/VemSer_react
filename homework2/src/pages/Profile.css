@@ -1,0 +1,35 @@
+.profile-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-container>h1 {
+    padding: 24px 0px 8px 0px;
+}
+
+.image-and-name {
+    background-color: #555555;
+    border-radius: 30px;
+    width: 80%;
+    padding: 24px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-and-name>img {
+    height: 400px;
+    margin-bottom: 16px;
+    border-radius: 25px;
+}
+
+.image-and-name>h2,
+.image-and-name>p {
+    margin-top: 8px;
+    font-size: 24px;
+    color: white;
+}
