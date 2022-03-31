@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "./context/Auth";
-import NotFound from "./components/NotFound";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
 import Users from "./pages/Users";
 
 function RoutesPage() {
