@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Users from "./pages/Users";
+import Cep from "./pages/Cep";
 
 function RoutesPage() {
   const { jwt } = useContext(AuthContext);
@@ -17,6 +18,7 @@ function RoutesPage() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/users" element={<Users />} />
+              <Route path="/cep" element={<Cep />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>

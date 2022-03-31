@@ -7,6 +7,7 @@ function PageLinks() {
     <ul>
       <li><button onClick={() => navigate('/')}>Home</button></li>
       <li><button onClick={() => navigate('/users')}>Usuarios</button></li>
+      <li><button onClick={() => navigate('/cep')}>Consultar CEP</button></li>
     </ul>
   );
 }

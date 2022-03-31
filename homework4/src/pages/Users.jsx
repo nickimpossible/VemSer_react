@@ -31,8 +31,8 @@ function Users() {
       });
       let newUsers = response.data;
       for (let user of newUsers) {
-        user.dataNascimento = formatDate(user.dataNascimento);
         user.cpf = formatCPF(user.cpf);
+        user.dataNascimento = formatDate(user.dataNascimento);
       }
       setApiUsers(newUsers);
       setApiError(false);
@@ -51,21 +51,21 @@ function Users() {
       <Header />
       <div>
         <h1>Usuarios</h1>
-        { 
+        {
           loading ? <Loading /> :
-          apiError ? <ApiError /> :
-            <div>
-              {
-                apiUsers.map(user => (
-                  <div key={user.idPessoa}>
-                    <strong>{user.nome}</strong>
-                    <p>{user.cpf}</p>
-                    <p>{user.email}</p>
-                    <p>{user.dataNascimento}</p>
-                  </div>
-                ))
-              }
-            </div>
+            apiError ? <ApiError /> :
+              <div>
+                {
+                  apiUsers.map(user => (
+                    <div key={user.idPessoa}>
+                      <strong>{user.nome}</strong>
+                      <p>{user.cpf}</p>
+                      <p>{user.email}</p>
+                      <p>{user.dataNascimento}</p>
+                    </div>
+                  ))
+                }
+              </div>
         }
       </div>
       <Footer />
