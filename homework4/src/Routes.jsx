@@ -1,9 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useContext } from "react";
-import { AuthContext } from "./context/Auth"
-import Login from "./pages/Login"
-import Home from "./pages/Home"
-import Users from "./pages/Users"
+import { AuthContext } from "./context/Auth";
+import NotFound from "./components/NotFound";
+import Login from "./pages/Login";
+import Home from "./pages/Home";
+import Users from "./pages/Users";
 
 function RoutesPage() {
   const { jwt } = useContext(AuthContext);
@@ -16,6 +17,7 @@ function RoutesPage() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/users" element={<Users />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
       }
